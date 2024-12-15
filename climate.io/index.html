@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://sundown-ivory.vercel.app/icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="climate.css">
+    <title>climate.io | Your personalized gateway to real-time weather insights</title>
+</head>
+
+<body>
+    <header>
+        <h2>CLIMATE.<span style="font-weight: 400;">IO</span></h2>
+        <div class="search-container">
+            <input type="text" placeholder="search city" class="search-input" spellcheck="false" autocomplete="off">
+            <i class="ri-search-line search-icon" onclick="srch()"></i>
+        </div>
+    </header>
+    <div id="begin-statement">
+        <h1>search city to <span>start <i class="ri-arrow-right-up-line"></i></span></h1>
+        <p id="welcome">Welcome to Climate.io – your personalized gateway to real-time weather insights.</p>
+    </div>
+    <main>
+
+
+        <div class="w-card-section">
+            <div class="w-card none">
+                <div class="reading">
+                    <div id="temp">
+                        <h1>20°c</h1>
+                        <div id="date">20/1/2024</div>
+                    </div>
+                    <div id="area">
+                        <i style="font-weight: 100;" class="ri-map-pin-line"></i> <span id="city">Karachi</span>, <span
+                            id="country">PK</span>
+                    </div>
+                    <div id="cloud"><i class="ri-cloud-line"></i> Haze</div>
+                </div>
+                <div class="w-img">
+                    <img src="images/partlyCloudy.png" width="100" height="100">
+                </div>
+
+                <div class="specs-section">
+                    <div class="humidity">
+                        Humidity <div id="h-value">13%</div>
+                    </div>
+                    <div class="wind-speed">
+                        Wind speed <div id="ws-value">2 m/s</div>
+                    </div>
+                </div>
+
+                <div class="baap">
+                    <div class="future-cards-section">
+                        <div class="cards">
+                            <div class="future-date">
+                                Mon, Dec 16
+                            </div>
+                            <div class="card-img">
+                                <img src="images/rain.png">
+                            </div>
+                            <div class="future-temp">
+                                28°C
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="future-date">
+                                Tue, Dec 16
+                            </div>
+                            <div class="card-img">
+                                <img src="images/rain.png">
+                            </div>
+                            <div class="future-temp">
+                                28°C
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="future-date">
+                                Thu, Dec 16
+                            </div>
+                            <div class="card-img">
+                                <img src="images/rain.png">
+                            </div>
+                            <div class="future-temp">
+                                28°C
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="future-date">
+                                Fri, Dec 16
+                            </div>
+                            <div class="card-img">
+                                <img src="images/rain.png">
+                            </div>
+                            <div class="future-temp">
+                                28°C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+
+        document.querySelector('.search-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.search-icon').click();
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
